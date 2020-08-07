@@ -33,7 +33,9 @@ After installing the tools/dependencies, you can make a connection with the HD w
 
 You can run these transactions out of the notebook, or out of the terminal. For the terminal, one can use the following command. Make sure you open the terminal in the ethereum environment and navigate to the wallet folder. Then start the python prompt by typing `$python`
 
-The same commands (with the exception of the first import line 'from wallet import, this wont be necessary) would do the same job.
+The same commands (with the exception of the first import line 'from wallet import, this wont be necessary) would do the same job if you want to run the code out of the notebook. For this assignment I ran the code in two ways, both in the terminal and the notebook. Below you can find screenshots of the succesful transactions as well as the lines of code.
+
+For the BTC Test transactions I used the BTC Test faucet to fund my generated accounts with test BTC.
 
 *commands*
 
@@ -49,6 +51,8 @@ send_tx(BTCTEST, btc_key, derive_wallets(mnemonic2, BTCTEST, 3)[1][‘address'],
 ![BTC Web Confirmation](screenshots/btc_tx_web.png)
 
 **A Ethereum Transaction**
+
+For the Ethereum transactions I used ganache to set up a blockchain with prefunded ETH accounts.
 
 *commands*
 
