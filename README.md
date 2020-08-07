@@ -31,11 +31,32 @@ After installing the tools/dependencies, you can make a connection with the HD w
 
 **A BTC Testnet Transaction**
 
+You can run these transactions out of the notebook, or out of the terminal. For the terminal, one can use the following command. Make sure you open the terminal in the ethereum environment and navigate to the wallet folder. Then start the python prompt by typing `$python`
+
+The same commands (with the exception of the first import line 'from wallet import, this wont be necessary) would do the same job.
+
+*commands*
+
+from wallet import *
+
+btc_key = priv_key_account(BTCTEST, derive_wallets(mnemonic2, BTCTEST, 3)[0][‘privkey'])
+
+send_tx(BTCTEST, btc_key, derive_wallets(mnemonic2, BTCTEST, 3)[1][‘address'], 0.001)
+
+
 ![BTC Python Transaction](screenshots/btc_tx_python.png)
 
 ![BTC Web Confirmation](screenshots/btc_tx_web.png)
 
 **A Ethereum Transaction**
+
+*commands*
+
+from wallet import *
+
+eth_key = priv_key_account(ETH, derive_wallets(mnemonic, ETH, 3)[0][‘privkey'])
+
+send_tx(ETH, eth_key, derive_wallets(mnemonic, ETH, 3)[1][‘address'], 20)
 
 ![ETH Python Transaction](screenshots/eth_tx_python.png)
 
